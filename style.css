@@ -44,7 +44,7 @@ body {
   width: auto;
   height: 400px;
   overflow-y: scroll;
-  scrollbar-width: thin;
+  overflow-x: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,10 +61,17 @@ body {
   justify-content: space-between;
   margin: 10px 0px;
 }
+
+.txt-parent {
+  justify-content: flex-start;
+  flex-basis: 80%;
+}
+
 .list-txt {
   font-family: 'Poppins';
   color: white;
   font-size: 25px;
+  overflow-wrap: break-word;
 }
 
 .done {
@@ -174,7 +181,13 @@ body {
 
   .list-child {
     width: 290px;
+  }
 
+  .txt-parent {
+    border: 1px solid red;
+    justify-content: flex-start;
+    flex-basis: 40%;
+    overflow-wrap: break-word;
   }
 
   .form {
