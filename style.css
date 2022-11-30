@@ -40,7 +40,7 @@ body {
 }
 
 .list-parent {
-  margin: 40px 10px;
+  margin: 30px 10px;
   width: auto;
   height: 400px;
   overflow-y: scroll;
@@ -54,9 +54,9 @@ body {
   width: 600px;
   display: block;
   background-color: #3a3a3a;
-  height: 75px;
+
   border-radius: 10px;
-  padding: 10px;
+  padding: 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,6 +67,15 @@ body {
   color: white;
   font-size: 25px;
 }
+
+.done {
+  font-family: 'Poppins';
+  color: grey;
+  font-size: 25px;
+  text-decoration: line-through;
+}
+
+
 
 .list-rm {
   padding: 10px;
@@ -140,4 +149,49 @@ body {
 
 }
 
+@media only screen and (max-width: 600px) {
 
+  .base {
+    width: 350px;
+    padding: 10px;
+  }
+
+  .head {
+    display: block;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 30px;
+    margin: 5px;
+  }
+
+  .list-parent {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .list-child {
+    width: 290px;
+
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+  }
+
+  .input {
+    width: 300px;
+    margin: 20px;
+  }
+
+  .add-btn {
+    width: 300px;
+  }
+
+}

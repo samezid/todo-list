@@ -1,13 +1,46 @@
-let listParent = document.getElementById('list-parent')
+const listTxt = document.querySelector('.list-child');
+const input = document.querySelector('.input');
+const submit = document.querySelector('.add-btn');
+const listParent = document.querySelector('.list-parent');
 
+let dataBase = [];
 
-// if add-task onclick= tambah li
-function addTask() {
-    // ambil addtask
-    let input = document.getElementById('input')
-    let newList = "<li class='list-child' id='list-child'><span class='list-txt'>" + input.value + "</span><span><button class='list-dn'><i class='fa fa-check' aria-hidden='true'></i></button><button class='list-rm' onclick='rm()'><i class='fa fa-trash' aria-hidden='true'></i></button></span></li>"
+submit.addEventListener('click', () => {
+  dataBase.push({
+    id: Date.now(),
+    text: input.value,
+    finish: false,
+  });
+  input.value = '';
+  render();
+  console.log(dataBase)
+});
 
-    listParent.insertAdjacentHTML('afterbegin', newList)
+function render() {
+    removeElement()
+  dataBase.forEach((data) => {
+    const listChild = document.createElement('div');
+    const buttonParent = document.createElement('div');
+    const listTxt = document.createElement('p');
+    const listDn = document.createElement('i');
+    const listRm = document.createElement('i');
 
-    input.value = ""
+    listChild.className = 'list-child';
+    listTxt.className = 'list-txt';
+    listTxt.innerHTML = data.text;
+    listDn.className = 'fa fa-check list-dn';
+    listRm.className = 'fa fa-trash list-rm';
+
+    listChild.appendChild(listTxt);
+    listChild.appendChild(buttonParent);
+    buttonParent.appendChild(listDn);
+    buttonParent.appendChild(listRm);
+    listParent.appendChild(listChild);
+  });
+}
+
+function removeElement() {
+    while (listParent.hasChildNodes()) {
+        listParent.removeChild(listParent.firstChild)
+    }
 }
