@@ -25,6 +25,8 @@ function render() {
     const listDn = document.createElement('i');
     const listRm = document.createElement('i');
 
+    listRm.onclick = () => deleteList(data.id)
+
     listChild.className = 'list-child';
     listTxt.className = 'list-txt';
     listTxt.innerHTML = data.text;
@@ -36,6 +38,28 @@ function render() {
     buttonParent.appendChild(listDn);
     buttonParent.appendChild(listRm);
     listParent.appendChild(listChild);
+
+    listDn.onclick = () => {
+        if(data.finish === false){
+            data.finish = true
+            listChild.style.background = '#01010'
+            listTxt.style.color = 'grey'
+            listTxt.style.textDecoration  = 'line-through'
+            listDn.style.border = '2px solid grey'
+            listDn.style.color = 'grey'
+            listRm.style.border = '2px solid grey'
+            listRm.style.color = 'grey'
+        } else {
+            data.finish = false
+            listChild.style.background = '#3a3a3a'
+            listTxt.style.color = 'white'
+            listTxt.style.textDecoration  = 'none'
+            listDn.style.border = '2px solid #60C687'
+            listDn.style.color = '#60C687'
+            listRm.style.border = '2px solid #E91F63'
+            listRm.style.color = '#E91F63'
+        }
+    }
   });
 }
 
@@ -43,4 +67,9 @@ function removeElement() {
     while (listParent.hasChildNodes()) {
         listParent.removeChild(listParent.firstChild)
     }
+}
+
+function deleteList(id) {
+    dataBase = dataBase.filter(data => data.id !== id)
+    render();
 }
