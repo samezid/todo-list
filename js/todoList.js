@@ -2,7 +2,7 @@ const listTxt = document.querySelector('.list-child');
 const input = document.querySelector('.input');
 const submit = document.querySelector('.add-btn');
 const listParent = document.querySelector('.list-parent');
-
+const KEY = 'TODOLIST'
 let dataBase = [];
 
 submit.addEventListener('click', () => {
@@ -12,6 +12,7 @@ submit.addEventListener('click', () => {
     finish: false,
   });
   input.value = '';
+  saveData();
   render();
 });
 
@@ -37,7 +38,7 @@ function render() {
     if (data.finish) {
       data.finish = true;
       listChild.style.background = '#282828';
-      listChild.style.transition = 'all 1s ease';
+      listChild.style.transition = 'all 0.5s ease';
       listChild.style.width = '550px';
       listTxt.style.color = 'grey';
       listTxt.style.textDecoration = 'line-through';
@@ -92,3 +93,16 @@ function deleteList(id) {
   dataBase = dataBase.filter((data) => data.id !== id);
   render();
 }
+
+function saveData() {
+    localStorage.setItem(KEY, JSON.stringify(dataBase))
+    getData()
+    render()
+}
+
+function getData() {
+    dataBase = JSON.parse(localStorage.getItem(KEY))
+}
+
+getData()
+render()

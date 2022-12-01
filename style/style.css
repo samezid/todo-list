@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Poppins:wght@400;700&family=Roboto&display=swap');
+
+body {
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .card-parent {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 1000px;
+    flex-wrap: wrap;
+  }
+
+  .task-parent {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #D3F233;
+    font-family: 'Poppins';
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .task-title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .task-child {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+    
+  .task-child a {
+    padding: 10px;
+    transition: 0.5s;
+    color: rgb(0, 0, 0);            
+    border-radius: 10px;
+    text-decoration: none;
+    align-self: flex-end;
+  }
+
+  .task-child a:hover {
+    background-image: linear-gradient(to right, #22a3ff 0%, #3f33ee  51%, #d322ff  100%);
+    padding: 10px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+  
+  /* calculator */
+  .calculator-parent {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f233e2;
+    font-family: 'Poppins';
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .calculator-title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .calculator-child {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+    
+  .calculator-child a {
+    padding: 10px;
+    transition: 0.5s;
+    color: rgb(0, 0, 0);            
+    border-radius: 10px;
+    text-decoration: none;
+    align-self: flex-end;
+  }
+
+  .calculator-child a:hover {
+    background-image: linear-gradient(to right, #22ff8d 0%, #33eedb  51%, #228dff  100%);
+    padding: 10px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* invoiceGenerator */
+  .invoiceGenerator-parent {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #33ecf2;
+    font-family: 'Poppins';
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .invoiceGenerator-title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .invoiceGenerator-child {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+    
+  .invoiceGenerator-child a {
+    padding: 10px;
+    transition: 0.5s;
+    color: rgb(0, 0, 0);            
+    border-radius: 10px;
+    text-decoration: none;
+    align-self: flex-end;
+  }
+
+  .invoiceGenerator-child a:hover {
+    background-image: linear-gradient(to right, #cbff22 0%, #eed833  51%, #ff226c  100%);
+    padding: 10px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+/* commingSoon */
+  .commingSoon-parent {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #454545;
+    font-family: 'Poppins';
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .commingSoon-title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .commingSoon-child {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+    
+  .commingSoon-child a {
+    padding: 10px;
+    transition: 0.5s;
+    color: rgb(0, 0, 0);            
+    border-radius: 10px;
+    text-decoration: none;
+    align-self: flex-end;
+  }
+
+  .commingSoon-child a:hover {
+    background-image: linear-gradient(to right, #22ff8d 0%, #33eedb  51%, #228dff  100%);
+    padding: 10px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
